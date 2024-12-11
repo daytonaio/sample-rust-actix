@@ -1,34 +1,95 @@
-This repository contains a README file sample for Daytona Samples and the MIT License.
+# Sample Rust/Actix-Web
 
-It can be used as a template to create sample repositories that can be added into [Daytona](https://github.com/daytonaio/daytona).
+This is a sample **Rust** project using **Actix-Web**, designed to demonstrate a simple and scalable backend web framework. This project showcases features like routing, custom 404 handling, and responsive development environments, making it an excellent starting point for web development using Actix-Web.
 
-Once you finish your sample and it gets merged, you can open a PR in the Daytona repo and submit the sample into the [index file](https://github.com/daytonaio/daytona/blob/main/hack/samples/index.json).
-
-# Sample <LANGUAGE/FRAMEWORK>
-
-Sample description
-
----
+---  
 
 ## 🚀 Getting Started  
 
 ### Open Using Daytona  
 
-1. **Install Daytona**: Follow the [Daytona installation guide](https://www.daytona.io/docs/installation/installation/).  
+1. **Install Daytona**:  
+   Follow the [Daytona installation guide](https://www.daytona.io/docs/installation/installation/).  
+
 2. **Create the Workspace**:  
-   ```bash  
-   daytona create <SAMPLE_REPO_URL> 
-   ```  
+   Use Daytona to create a new workspace from this repository:  
 
-... MORE STEPS IF NEEDED ...
-
-4. **Start the Application**:  
    ```bash  
-   command to start the app
-   ```  
+   daytona create https://github.com/ArnavK-09/sample-rust-actix
+   ```
+  
+
+3. **Configured Dependencies**:
+Once inside the Daytona workspace, dependencies like Rust and Actix-Web will be pre-configured using the provided devcontainer. To manually verify dependencies, ensure you have Rust installed:
+
+   ```bash
+   rustup show
+   ```
+
+
+4. **Start the Application**:
+The following command to build and launch the Actix-Web server would run on project creation:
+
+   ```bash
+   cargo run
+   ```
+
+5. **The server will start!**
+
+
 
 ---
 
-## ✨ Features  
+## ✨ Features
 
-List of sample features (e.g. realtime chat app, standardized development environment with devcontainers)
+### 1. Custom Routing
+
+- A default / route that responds with "Hello world!"
+
+- A /repeat POST route that echoes the request body back to the client.
+
+
+### 2. Custom 404 Page
+
+- Handles all unknown routes and serves a custom 404.html page to enhance user experience.
+
+
+### 3. Standardized Development Environment
+
+- Integrated Dev Containers (devcontainer.json) for consistent development setups across machines.
+
+- Pre-configured Visual Studio Code extensions for enhanced productivity.
+
+
+### 4. Built for Daytona
+
+- Seamless integration with Daytona for quick workspace setup and deployment.
+
+
+
+---
+
+## 🛠️ Project Structure
+
+```
+├── src/
+│   ├── main.rs       # Entry point for the application
+├── static/           # Folder containing static files 
+├── .devcontainer/    # Pre-configured devcontainer setup
+├── Cargo.toml        # Project dependencies
+├── README.md         # Project documentation
+```
+
+---
+
+### 📖 Learn More
+
+- Actix-Web Documentation: https://actix.rs/
+
+- Rust Programming Language: https://www.rust-lang.org/
+
+- Daytona Workspaces: https://www.daytona.io/
+
+
+
+
